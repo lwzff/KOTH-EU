@@ -13,7 +13,7 @@ Donc merci de ne pas critiquez le code ! OUI le code est moches des boucles inut
 
 # Support me on Paypal :
 
-image::https://lh3.googleusercontent.com/proxy/0rpHNjYu5yDk7TqtKFcian7aMtsCDH_utUnhstTEZheez_tgbq19ddjfoj_xVUh0VEgSGM23CtsvFjWGrF6bAATtoiHyiNMX16cKgwbmVRkBtKCKtNjjLy1UIBeJugZP[Support me on paypal,link="https://streamelements.com/loze_kylian/tip"]
+image::https://www.les-parrains.fr/wp-content/uploads/2020/11/Paypal_bandeau.png[Support me on paypal,link="https://streamelements.com/loze_kylian/tip"]
 
 Merci au donateur !
 

@@ -8,9 +8,8 @@ endif::[]
 
 # KOTH-EU
 
-La base a était release pour les cause suivante : L'ancien designer UI nous ments, donne la base a des personnes qui se font passer pour le déveloper.
-J'ai travailler + de 2 / 3 mois sur la base, cet 3 mois ont était difficile pour moi, a cette époque je ne savais réelement pas quoi faire avec ce gros projet, j'ai appris + avec ce projet
-Donc merci de ne pas critiquez le code ! OUI le code est moches des boucles inutile et autres !
+La base a été release pour les causes suivantes : L’ancien designer UI nous ments, donne la base à des personnes qui se font passer pour le développer. J’ai travaillé + de 2 / 3 mois sur la base, c'est 3 mois ont été difficile pour moi, à cette époque je ne savais réellement pas quoi faire avec ce gros projet, j’ai appris + avec ce projet donc merci de ne pas critiquez le code ! OUI le code est moche des boucles inutiles et autres !
+
 
 # Support me on Paypal :
 

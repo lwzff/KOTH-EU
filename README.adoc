@@ -33,3 +33,11 @@ NOTE: Je ne donnerais aucun support !
 Véhicule:: DMZ
 Mapper:: Nampac
 Developer:: Kylian
+
+== Twitter
+
+.GameMode
+[horizontal]
+DMZ:: https://twitter.com/Dmzzz_TTV
+Nampac:: https://twitter.com/Nampac_
+Kylian:: https://twitter.com/kylian_Rd

@@ -5,7 +5,7 @@ Donc merci de ne pas critiquez le code ! OUI le code est moches des boucles inut
 
 # Support me on Paypal :
 
-image::https://logo-marque.com/wp-content/uploads/2020/04/PayPal-Logo.png[Support me on paypal,link="https://streamelements.com/loze_kylian/tip"]
+image::http://i.imgur.com/dyePK6Q.png[Support me on paypal,link="https://streamelements.com/loze_kylian/tip"]
 
 Merci au donateur !
 

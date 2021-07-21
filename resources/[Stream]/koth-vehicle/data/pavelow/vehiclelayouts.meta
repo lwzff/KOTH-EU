@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CVehicleMetadataMgr>
+  <VehicleLayoutInfos>
+  <Item type="CVehicleLayoutInfo">
+	  <Name>LAYOUT_HELI_PAVELOW</Name>
+	  <Seats>
+		<!-- Pilot -->
+		<Item>
+          <SeatInfo ref="SEAT_STANDARD_FRONT_LEFT" />
+          <SeatAnimInfo ref="SEAT_ANIM_HELI_FRONT_LEFT" />
+        </Item>
+		<!-- copilot -->
+		<Item>
+          <SeatInfo ref="SEAT_STANDARD_FRONT_RIGHT" />
+          <SeatAnimInfo ref="SEAT_ANIM_HELI_FRONT_RIGHT" />
+        </Item>
+		<!-- ramp guy -->
+		<Item>
+          <SeatInfo ref="SEAT_HELI_CARGOBOB_REAR_LEFT" />
+          <SeatAnimInfo ref="SEAT_ANIM_HELI_RAMP" />
+        </Item>
+		<!-- cargohold -->
+		<Item>
+          <SeatInfo ref="SEAT_STANDARD_REAR_RIGHT" />
+          <SeatAnimInfo ref="SEAT_ANIM_PLANE_TITAN_RIGHT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_EXTRA_NO_SHUFFLE_LEFT_1" />
+          <SeatAnimInfo ref="SEAT_ANIM_PLANE_TITAN_LEFT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_EXTRA_NO_SHUFFLE_RIGHT_1" />
+          <SeatAnimInfo ref="SEAT_ANIM_PLANE_TITAN_RIGHT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_EXTRA_NO_SHUFFLE_LEFT_2" />
+          <SeatAnimInfo ref="SEAT_ANIM_PLANE_TITAN_LEFT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_EXTRA_NO_SHUFFLE_RIGHT_2" />
+          <SeatAnimInfo ref="SEAT_ANIM_PLANE_TITAN_RIGHT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_EXTRA_NO_SHUFFLE_LEFT_3" />
+          <SeatAnimInfo ref="SEAT_ANIM_PLANE_TITAN_LEFT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_EXTRA_NO_SHUFFLE_RIGHT_3" />
+          <SeatAnimInfo ref="SEAT_ANIM_PLANE_TITAN_RIGHT" />
+        </Item>
+		<Item>
+          <SeatInfo ref="SEAT_EXTRA_NO_SHUFFLE_LEFT_4" />
+          <SeatAnimInfo ref="SEAT_ANIM_PLANE_TITAN_RIGHT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_EXTRA_NO_SHUFFLE_RIGHT_4" />
+          <SeatAnimInfo ref="SEAT_ANIM_PLANE_TITAN_RIGHT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_EXTRA_NO_SHUFFLE_LEFT_5" />
+          <SeatAnimInfo ref="SEAT_ANIM_PLANE_TITAN_LEFT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_EXTRA_NO_SHUFFLE_RIGHT_5" />
+          <SeatAnimInfo ref="SEAT_ANIM_PLANE_TITAN_RIGHT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_EXTRA_NO_SHUFFLE_LEFT_6" />
+          <SeatAnimInfo ref="SEAT_ANIM_PLANE_TITAN_LEFT" />
+        </Item>
+	  </Seats>
+	  <EntryPoints>
+		<Item>
+          <EntryPointInfo ref="ENTRY_POINT_PAVELOW_FRONT" />
+          <EntryPointAnimInfo ref="ENTRY_POINT_ANIM_BUS_FRONT_LEFT" />
+        </Item>
+		<Item>
+          <EntryPointInfo ref="ENTRY_POINT_PAVELOW_FRONT" />
+          <EntryPointAnimInfo ref="ENTRY_POINT_ANIM_BUS_FRONT_LEFT" />
+        </Item>
+		<Item>
+          <EntryPointInfo ref="ENTRY_POINT_PAVELOW_WARP" />
+          <EntryPointAnimInfo ref="ENTRY_POINT_ANIM_HELI_CARGOBOB_REAR_RIGHT" />
+        </Item>
+		
+		
+	  </EntryPoints>
+	  <LayoutFlags>StreamAnims WarpIntoAndOut UseFinerAlignTolerance Use2DBodyBlend</LayoutFlags>
+	  <BicycleInfo ref="NULL" />
+	  <HandsUpClipSetId>busted_vehicle_std</HandsUpClipSetId>
+	  <SteeringWheelOffset x="0.000000" y="0.350000" z="0.320000" />
+	</Item>
+  
+  </VehicleLayoutInfos>
+  <VehicleEntryPointInfos>
+	 <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_PAVELOW_FRONT</Name>
+      <DoorBoneName>door_dside_f</DoorBoneName>
+      <SecondDoorBoneName>door_pside_f</SecondDoorBoneName>
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_RIGHT</VehicleSide>
+      <AccessableSeats>
+        <Item ref="SEAT_STANDARD_FRONT_LEFT" />
+        <Item ref="SEAT_STANDARD_FRONT_RIGHT" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="NULL" />
+      <Flags />
+      <BlockJackReactionSides />
+    </Item>
+	<Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_PAVELOW_WARP</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_LEFT</VehicleSide>
+      <AccessableSeats>
+		<Item ref="SEAT_STANDARD_REAR_LEFT" />
+        <Item ref="SEAT_STANDARD_REAR_RIGHT" />
+		<Item ref="SEAT_EXTRA_NO_SHUFFLE_LEFT_1" />
+        <Item ref="SEAT_EXTRA_NO_SHUFFLE_LEFT_2" />
+        <Item ref="SEAT_EXTRA_NO_SHUFFLE_LEFT_3" />
+		<Item ref="SEAT_EXTRA_NO_SHUFFLE_RIGHT_1" />
+        <Item ref="SEAT_EXTRA_NO_SHUFFLE_RIGHT_2" />
+        <Item ref="SEAT_EXTRA_NO_SHUFFLE_RIGHT_3" />
+		<Item ref="SEAT_EXTRA_NO_SHUFFLE_LEFT_4" />
+        <Item ref="SEAT_EXTRA_NO_SHUFFLE_LEFT_5" />
+        <Item ref="SEAT_EXTRA_NO_SHUFFLE_LEFT_6" />
+		<Item ref="SEAT_EXTRA_NO_SHUFFLE_RIGHT_4" />
+        <Item ref="SEAT_EXTRA_NO_SHUFFLE_RIGHT_5" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="NULL" />
+      <Flags>IgnoreSmashWindowCheck MPWarpInOut SPEntryAllowedAlso</Flags>
+      <BlockJackReactionSides />
+    </Item>
+	
+  </VehicleEntryPointInfos>
+  
+  <VehicleExtraPointsInfos />
+  <VehicleEntryPointAnimInfos />
+	
+   <VehicleSeatAnimInfos>
+    <Item type="CVehicleSeatAnimInfo">
+      <Name>SEAT_ANIM_HELI_RAMP</Name>
+      <DriveByInfo ref="DRIVEBY_TRUCK_PHANTOMBULL_REAR" />
+      <InsideClipSetMap ref="INSIDE_CLIPSET_MAP_TRUCK_PHANTOMBULL_REAR" />
+      <PanicClipSet />
+      <AgitatedClipSet />
+      <DuckedClipSet />
+      <FemaleClipSet />
+      <LowriderLeanClipSet />
+      <AltLowriderLeanClipSet />
+      <LowLODIdleAnim>PHANTOMBULL_REAR_IDLE</LowLODIdleAnim>
+      <SeatAmbientContext />
+      <InVehicleMoveNetwork>VEHICLE_DEFAULT</InVehicleMoveNetwork>
+      <SeatAnimFlags>CannotBeJacked UseStandardInVehicleAnims PreventShuffleJack KeepCollisionOnWhenInVehicle</SeatAnimFlags>
+      <SteeringSmoothing value="0.050000" />
+      <ExitToAimInfoName />
+      <MaleGestureClipSetId />
+      <FemaleGestureClipSetId />
+      <FPSMinSteeringRateOverride value="-1.000000" />
+      <FPSMaxSteeringRateOverride value="-1.000000" />
+      <SeatCollisionBoundsOffset x="0.000000" y="0.000000" z="0.000000" />
+    </Item>
+  </VehicleSeatAnimInfos>
+   <VehicleSeatInfos>
+       <Item type="CVehicleSeatInfo">
+      <Name>SEAT_EXTRA_NO_SHUFFLE_LEFT_7</Name>
+      <SeatBoneName>seat_dside_r7</SeatBoneName>
+      <ShuffleLink />
+      <RearSeatLink />
+      <DefaultCarTask>TASK_DRIVE_WANDER</DefaultCarTask>
+      <SeatFlags />
+      <HairScale value="0.000000" />
+    </Item>
+   </VehicleSeatInfos>
+	
+	</CVehicleMetadataMgr>

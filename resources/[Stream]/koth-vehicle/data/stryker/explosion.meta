@@ -1,0 +1,45 @@
+<CExplosionInfoManager>
+  <aExplosionTagData>
+  	<Item>
+      <name>EXP_TAG_ORBITAL_CANNON</name>
+      <damageAtCentre value="5000.000000" />
+	  <damageAtMid value="700.000000" />
+      <damageAtEdge value="200.000000" />
+      <networkPlayerModifier value="2.000000" />
+      <networkPedModifier value="1.000000" />
+      <midRadius value="30.000000" />
+      <endRadius value="40.000000" />
+      <initSpeed value="150.000000" />
+      <decayFactor value="0.000000" />
+      <forceFactor value="100.000000" />
+      <fRagdollForceModifier value="0.000500" />
+      <fSelfForceModifier value="1.000000" />
+      <directedWidth value="0.000000" />
+      <directedLifeTime value="0.000000" />
+      <camShakeName>GAMEPLAY_EXPLOSION_SHAKE</camShakeName>
+      <camShake value="1.000000" />
+      <camShakeRollOffScaling value="1.500000" />
+      <shockingEventVisualRangeOverride value="-1.000000" />
+      <shockingEventAudioRangeOverride value="-1.000000" />
+      <minorExplosion value="false" />
+      <vfxTagHashName>EXP_VFXTAG_MPBM</vfxTagHashName>
+      <fragDamage value="1500.000000" />
+      <bAppliesContinuousDamage value="false" />
+      <bPostProcessCollisionsWithNoForce value="true" />
+      <bDamageVehicles value="true" />
+      <bDamageObjects value="true" />
+      <bOnlyAffectsLivePeds value="false" />
+      <bIgnoreExplodingEntity value="false" />
+      <bNoOcclusion value="false" />
+      <explodeAttachEntityWhenFinished value="false" />
+      <bCanSetPedOnFire value="false" />
+	  <bCanSetPlayerOnFire value="false" />
+	  <bSuppressCrime value="false" />
+	  <bUseDistanceDamageCalc value="true" />
+	  <bPreventWaterExplosionVFX value="false" />
+	  <bIgnoreRatioCheckForFire value="false" />
+	  <bAllowUnderwaterExplosion value="false" />
+	  <bForceVehicleExplosion value="true" />
+    </Item>
+  </aExplosionTagData>
+</CExplosionInfoManager>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDataFileMgr__ContentsOfDataFileXml>
+  <disabledFiles />
+  <includedXmlFiles />
+  <includedDataFiles />
+  <dataFiles>
+    <Item>
+      <filename>dlc_2015MercedesBrabusG5004x4:/data/vehicles.meta</filename>
+      <fileType>VEHICLE_METADATA_FILE</fileType>
+      <overlay value="false" />
+      <disabled value="true" />
+      <persistent value="false" />
+    </Item>
+    <Item>
+      <filename>dlc_2015MercedesBrabusG5004x4:/data/carvariations.meta</filename>
+      <fileType>VEHICLE_VARIATION_FILE</fileType>
+      <overlay value="false" />
+      <disabled value="true" />
+      <persistent value="false" />
+    </Item>
+    <Item>
+      <filename>dlc_2015MercedesBrabusG5004x4:/data/dlctext.meta</filename>
+      <fileType>TEXTFILE_METAFILE</fileType>
+      <overlay value="false" />
+      <disabled value="true" />
+      <persistent value="false" />
+    </Item>
+    <Item>
+      <filename>dlc_2015MercedesBrabusG5004x4:/data/handling.meta</filename>
+      <fileType>HANDLING_FILE</fileType>
+      <overlay value="false" />
+      <disabled value="true" />
+      <persistent value="false" />
+    </Item>	
+    <Item>
+      <filename>dlc_2015MercedesBrabusG5004x4:/%PLATFORM%/vehicles.rpf</filename>
+      <fileType>RPF_FILE</fileType>
+      <overlay value="false" />
+      <disabled value="true" />
+      <persistent value="true" />
+    </Item>    
+  </dataFiles>
+  <contentChangeSets>
+	<Item>
+	  <changeSetName>2015MercedesBrabusG5004x4_AUTOGEN</changeSetName>
+	  <filesToDisable />
+	  <filesToEnable>
+        <Item>dlc_2015MercedesBrabusG5004x4:/data/handling.meta</Item>
+        <Item>dlc_2015MercedesBrabusG5004x4:/data/vehicles.meta</Item>
+        <Item>dlc_2015MercedesBrabusG5004x4:/data/carvariations.meta</Item>
+        <Item>dlc_2015MercedesBrabusG5004x4:/data/dlctext.meta</Item>	
+        <Item>dlc_2015MercedesBrabusG5004x4:/%PLATFORM%/vehicles.rpf</Item>        
+	  </filesToEnable>
+	  <txdToLoad />
+	  <txdToUnload />
+	  <residentResources />
+	  <unregisterResources />
+	</Item>
+  </contentChangeSets>
+  <patchFiles />
+</CDataFileMgr__ContentsOfDataFileXml>

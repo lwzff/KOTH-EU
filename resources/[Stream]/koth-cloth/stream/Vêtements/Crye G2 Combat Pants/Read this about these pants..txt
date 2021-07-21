@@ -1,0 +1,3 @@
+The G2s appear to be a little bit buggy and I'm unsure of a fix at the moment, You cannot put these on a Saved MP Character as they are invisible for some reason
+however you can load your save character then put the G2s on and it works like that and making a new MP Ped Character but when you try load the MP Character with
+it you will not see it, I'm trying to find a fix and once I do this will be updated ASAP.

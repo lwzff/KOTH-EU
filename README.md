@@ -1,3 +1,11 @@
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
 # KOTH-EU
 La base a était release pour les cause suivante : L'ancien designer UI nous ments, donne la base a des personnes qui se font passer pour le déveloper, j'ai travailler + de 2 / 3 mois sur la base, cet 3 mois ont était difficile pour moi, a cette époque je ne savais réelement pas quoi faire avec ce gros projet, j'ai appris + avec ce projet
 

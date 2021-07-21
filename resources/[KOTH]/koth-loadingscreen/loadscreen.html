@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Atlantiss • Chargement...</title>
+        <link href="css/loadscreen.css" rel="stylesheet" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <img id="cursor" src="./img/cursor.png" />
+        <div id="color-layer"></div>
+
+        <video autoplay muted loop id="bg-video">
+            <source src="./medias/video.webm" type="video/webm">
+        </video>
+
+    	<div id="logo">
+            <img id="logoimg" src="./img/logo.png" />
+        </div>	
+        <div id="volume-box">
+            <div id="volume-img-ct">
+                <img id="volume-img" onclick="muteMusic()" src="./img/unmute.png" />
+            </div>
+            <div id="volume-meter">
+                <div id="volume-bar"></div>
+            </div>
+        </div>
+        <script src="./js/loadscreen.js"></script>
+
+        <!-- Règles !!!!-->
+
+        <!-- <div id="tips">
+            <h2 class="tip">
+                <span style="font-weight: bold;">2. Le respect d’autrui</span><br>
+                Le Respect de chacun est une Règle d’Or sur Atlantiss. Aucun écart ne sera toléré.
+                Il en va de soi que pour que le serveur avance dans le bon sens, chacun se doit de respecter autrui comme il aimerait que les autres le respecte. 
+                Pour reprendre une citation de Bouddha :<br/>
+                <span style="font-style:italic;">“Ne blesse pas les autres par des moyens que tu trouverais toi-même blessants” - Bouddha</span>
+            </h2>
+            <h2 class="tip">
+                <span style="font-weight: bold;">10. Cohérence des blessures</span><br>
+                Vous vous devez d’être cohérent avec les blessures de vos personnages et ne pas les minimiser. De même que vous vous devez de suivre les directives des médecins à la lettre. 
+                Si cela implique l’immobilisation de votre personnage pour une durée déterminée, alors vous devrez respecter la durée donnée ; il en va de même pour les interdictions telles que l’interdiction d’activité physique, les arrêts de travail, etc. 
+                </h2>
+            <h2 class="tip">
+                <span style="font-weight: bold;">21. Les mots interdits</span><br>
+                Un certain vocabulaire est interdit sur le serveur.<br/>
+                Ainsi, les termes tels que “moldus”, “quel muscle (pour demander une touche)”, “mal de tête (pour parler d’un soucis technique)”, “les dieux (pour parler des admins)”, “l’unité x (pour parler du respawn)”, “aller sur le continent” (pour parler d’une déconnexion) font parti de ce vocabulaire.
+            </h2>
+            <h2 class="tip">
+                <span style="font-weight: bold;">11. Safe Zone</span><br>
+                Les Safe Zone sont des zones blanches dans lesquelles il est explicitement interdit de commettre des actes illégaux, c’est notamment le cas du poste de police et de l’hôpital.(la safe zone s’étend dans un rayon d’une centaine de mètres autour de la zone)
+            </h2>
+            <h2 class="tip">
+                <span style="font-weight: bold;">1. Le fair-play</span><br>
+                La règle la plus importante d’Atlantiss, elle permet le plaisir de jeu de tous les joueurs présent sur une scène : <span style="text-decoration: underline;">JOUER FAIR-PLAY</span>
+            </h2>
+            <h2 class="tip">
+                <span style="font-weight: bold;">6.5. Vol véhicule joueur</span><br>
+                Les vols de véhicules doivent être fait avec parcimonie et avec une raison valable et ou une utilité (pas de vol juste pour que le véhicule dorme dans un garage).<br/>
+                Une scène doit être proposée dans les 72h max (rançon, destruction partiel ou autre) tout abus sera sanctionné.
+            </h2>
+            <h2 class="tip">
+                <span style="font-weight: bold;">9.4. Reconnaissance</span><br>
+                Un personnage masqué ne peut pas être reconnu par sa voix ou des particularités physiques (tatouages, couleur de cheveux, etc)<br/>
+                Il n'en reste pas moins que les tics ou particularités de langage peuvent être entendus sans pour autant permettre d'affirmer identifier UNE personne en particulier.
+            </h2>
+            <h2 class="tip">
+                <span style="font-weight: bold;">9.6. Destruction de véhicule</span><br>
+                La destruction de véhicule est autorisée dans la mesure où elle répond à une motivation RP et que vous pouvez attester de preuves.<br/>
+                Le staff se réserve le droit de vous demander les raisons.
+            </h2>
+        </div> -->
+        <div id="loader">
+            <div class="loadbar"><div class="progress"></div></div>
+        </div>
+ 
+        <audio volume="0.10" autoplay="" id="music-player" loop="" >
+            <source id="src" src="medias/music.mp3" type="audio/mp3">
+        </audio>
+        
+    </body>	
+</html>

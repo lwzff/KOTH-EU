@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/7b6e2d546d.js" crossorigin="anonymous"></script>
+        <script defer src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js" type="text/javascript"></script>
+        <script>
+            var audioPlayer = null;
+            // Listen for NUI Messages.
+            window.addEventListener('message', function(event) {
+                // Check for playSound transaction
+                if (event.data.transactionType == "playSound") {
+				
+                  if (audioPlayer != null) {
+                    audioPlayer.pause();
+                  }
+
+                  audioPlayer = new Howl({src: ["./client/sounds/" + event.data.transactionFile + ".ogg"]});
+                  audioPlayer.volume(event.data.transactionVolume);
+                  audioPlayer.play();
+
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div id="hud" class="hud">
+            <div class="teams">
+                <div id="red" class="red">
+                    <span id="players"><i class="fas fa-user-alt"></i> <span id="redplayers"></span></span>
+                    <span id="point"><i class="fas fa-flag"></i> <span id="redpoint"></span></span>
+                    <span id="target"><i class="fas fa-shield-alt"></i> <span id="redtarget"></span></span>
+                </div>
+                <div id="blue" class="blue">
+                    <span id="players" class="players"><i class="fas fa-user-alt"></i> <span id="blueplayers"></span></span>
+                    <span id="point" class="point"><i class="fas fa-flag"></i> <span id="bluepoint"></span></span>
+                    <span id="target"><i class="fas fa-shield-alt"></i> <span id="bluetarget"></span></span>
+                </div>
+                <div id="green" class="green">
+                    <span id="players" class="players"><i class="fas fa-user-alt"></i> <span id="greenplayers"></span></span>
+                    <span id="point" class="point"><i class="fas fa-flag"></i> <span id="greenpoint"></span></span>
+                    <span id="target"><i class="fas fa-shield-alt"></i> <span id="greentarget"></span></span>
+                </div>
+            </div>
+
+            <div id="killevent" class="killevent"></div>
+
+            <div class="bag">
+
+                <div id="equiped" class="equipedWepon get">
+
+                    <div class="weapon large" id="equipedWepon">
+                    </div>
+
+                    <div class="ammo">
+                        <span id="ammo"></span>
+                        <img src="hud/bullets.png"></img>
+                    </div>
+
+                    <div class="reload large"><span id="reload"></span></div>
+                </div>
+
+                    <div id="weapon1" class="weapon1">
+                        <span class="bind">1</span>
+                    </div>
+                    <div id="weapon2" class="weapon2">
+                        <span class="bind">2</span>
+                    </div>
+                    <div id="weapon3" class="weapon3">
+                        <span class="bind">3</span>
+                    </div>
+                <div class="stats">
+                    <div class="player">
+                        <div class="name">
+                            <span id="player">Atlantiss KOTH</span>
+                        </div>
+                        <div class="money">
+                            <i class="fas fa-money-bill-alt" style="color: green"></i>
+                            <span id="money">0</span>
+                        </div>
+                    </div>
+                    <div class="xp-bar">
+                        <span class="lvl">
+                            <span id="from"></span>
+                            <span id="to"></span>
+                        </span>
+                        <span class="granted">
+                            <span id="xp"></span>
+                             / 
+                            <span id="xp2"></span>
+                        </span>
+                        <span id="mana"><br></span>
+                    </div>
+                </div>
+
+                <div class="life"><span id="life"></span></div>
+            </div>
+
+
+        </div>
+
+        
+        <div id="xpright" class="newxp"  style="display: none;">
+            <h1 id="xpright_top">+ $25 Playing Objective</h1>
+            <h2 id="xpright_bottom">+ 25 XP</h2>
+        </div>
+
+        <div id="xpcenter" class="newxp"  style="display: none;">
+            <h1 id="xpcenter_top">22525</h1>
+            <h2 id="xpcenter_bottom">1144</h2>
+        </div>
+    </body>
+</html>

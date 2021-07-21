@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:200');
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-weight: 200;
+    font-family: "Roboto", "Segoe UI", sans-serif;
+    cursor: none;
+}
+
+#logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 3;
+    text-align: center;
+    width: 100%;
+}
+
+#logo img {
+    width: 300px;
+    filter: hue-rotate(0) drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.3));
+    transition: all 0.5s ease;
+}
+
+#loader {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 5;
+    color: #fff;
+}
+
+#tips {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    text-align: center;
+    z-index: 3;
+    transform: translateX(-50%) translateY(-30%);
+}
+.tip {
+    display: none;
+    color: #FFF;
+    font-weight: 200;
+    font-size: 1.4em;
+}
+
+#loader h3 {
+    font-size: 40px;
+    margin: 0 0 5px 5px;
+    color: #FFF;
+    font-weight: 300;
+    font-size: 2em;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+#circle {
+    margin-bottom: -6px;
+    margin-left: 3px;
+}
+
+.loadbar {
+    width: 100%;
+    height: 10px;
+    position: relative;
+}
+
+.progress {
+    width: 25%;
+    background-color: #ffffff;
+    box-shadow:0px 0px 10px #585858;
+    height: 10px;
+    position: absolute;
+    left: 0%;
+    transition: all 0.5s ease;
+}
+
+audio {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#bg-video {
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+#color-layer {
+    background: url('../img/colorLayer.png');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+
+#cursor {
+    position: absolute;
+    z-index: 999;
+    pointer-events: none;
+}
+
+img#cursor {
+    width: 24px;
+    height: 24px;
+}
+
+#volume-box {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    z-index: 9;
+}
+
+#volume-meter {
+    display: inline-block;
+    width: 125px;
+    margin-bottom: 5px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+}
+
+#volume-bar {
+    height: 8px;
+    width: 25%;
+    margin: 2px;
+    display: block;
+    border-radius: 4px;
+    background: #fff;
+    transition: all 0.5s ease;
+}
+#volume-box > div {
+    display: inline-block;
+}
+
+#volume-img-ct {
+    margin-top: 5px;
+}
+img#volume-img {
+    width: 24px;
+    height: 24px;
+}

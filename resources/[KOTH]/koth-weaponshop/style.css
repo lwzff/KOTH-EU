@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+button:hover {
+  transform: scale(1.1);
+}
+
+/* Base */
+html, body {
+  height: 100%;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.wrapper div.view {
+  position: relative;
+  display: none;
+  flex-direction: column;
+  background-color: rgba(49, 49, 49, 0.65);
+  color: white;
+  height: 700px;
+  width: 1370px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  margin: 0 5%;
+}
+.wrapper div.view header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 96.5%;
+}
+.wrapper div.view header div.title {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.wrapper div.view header div.title p {
+  font-size: 40px;
+  margin-right: 15px;
+}
+.wrapper div.view div.classes {
+  display: flex;
+  padding: 1rem;
+  height: 95.5%;
+  width: 97.5%;
+}
+.wrapper div.view section.shop {
+  position: absolute;
+  top: 0;
+  left: 1350px;
+  background-color: #303030;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  height: 95.5%;
+  width: 350px;
+  border-radius: 20px;
+  z-index: 2;
+ 
+  transition: all 300ms ease-in-out;
+}
+#closebtn {
+  font-size: 40px;
+  font-weight: 300;
+  top: 10px;
+  right: 25px;
+}
+#errordiv {
+  pointer-events: none;
+  text-align: center;
+  margin: 0px;
+  font-weight: 400;
+  color: lightgray;
+}
+/* End Base */
+
+/* Home */
+div.home {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+div.classes {
+  height: 100%;
+}
+div.class {
+  float: left;
+  width: 250px;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  font-weight: 400;
+  font-size: 30px;
+  border-radius: 20px;
+  transition-duration: 0.5s;
+  margin-left: 10px;
+  overflow: hidden;
+}
+div.class-locked {
+  float: left;
+  width: 250px;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  font-weight: 400;
+  font-size: 30px;
+  border-radius: 20px;
+  transition-duration: 0.5s;
+  margin-left: 10px;
+  overflow: hidden;
+}
+div.class#Ground, div.class#Air {
+  float: left;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  font-weight: 400;
+  font-size: 30px;
+  border-radius: 20px;
+  transition-duration: 0.5s;
+  margin-left: 10px;
+  overflow: hidden;
+}
+div.class-locked#Ground, div.class-locked#Air {
+  float: left;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  font-weight: 400;
+  font-size: 30px;
+  border-radius: 20px;
+  transition-duration: 0.5s;
+  margin-left: 10px;
+  overflow: hidden;
+}
+.class:hover {
+  transform: scale(0.95);
+}
+.class:hover .layer {
+  background: transparent;
+  transform: scale(0.95);
+}
+.layer {
+  /* background-color: rgba(0, 0, 0, 0.65); */
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  border-radius: 20px;
+
+  transition-duration: 0.4s;
+}
+.layer.disabled {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+#back {
+  font-size: 40px;
+  font-weight: 300;
+  width: auto;
+}
+#back i {
+  padding-right: 15px;
+}
+#back:hover {
+  transform: scale(1.2);
+}
+/* End Home */
+
+/* Items */
+div.itemwrapper {
+  width: 100%;
+  bottom: 0px;
+  top: 130px;
+  margin: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border-radius: 30px;
+}
+div.primary, .secondary, .throwable {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  width: 100%;
+  margin-bottom: 20px;
+}
+div.item {
+  background-position: center;
+  background-size: cover;
+  float: left;
+  margin: 15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  font-size: 20px;
+  padding-left: 10;
+  border-radius: 20px;
+  transition: all 300ms ease-in;
+}
+div.item-lock {
+  background-position: center;
+  background-size: cover;
+  float: left;
+  margin: 15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  font-size: 20px;
+  padding-left: 10;
+  border-radius: 20px;
+  transition: all 300ms ease-in;
+}
+div.item:hover {
+  transform: scale(1.1);
+}
+.itemlayer {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition-duration: 0.4s;
+  text-align: center;
+  border-radius: 20px;
+}
+div.itemlayer p {
+  margin: 0px;
+  top: 25%;
+  width: 100%;
+  font-weight: 700;
+}
+div.itemlayer i {
+  font-size: 50px;
+}
+
+div.itemspacer {
+  clear: both;
+  font-size: 20px;
+  margin-left: 10px;
+  font-weight: 400px;
+}
+div.itemwrapper::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(100, 100, 100, 0.0);
+
+}
+div.itemwrapper::-webkit-scrollbar {
+  width: 12px;
+  background-color: rgba(100, 100, 100, 0.0);
+  border-radius: 5px;
+}
+div.itemwrapper::-webkit-scrollbar-thumb {
+  background-color: rgba(83, 82, 82);
+  border-radius: 5px;
+}
+/* End Items */
+
+/* Shop */
+#logo {
+  min-height: 500px;
+  background-position: center;
+}
+section.shop div#primary, div#secondary,
+div#throwable, div#special, div#buyall {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 20px;
+  background-color: #474747;
+  margin-top: 10px;
+}
+section.shop div#primary button, div#secondary button,
+div#throwable button, div#special button, div#buyall button {
+  background-color: #c7ad26;
+  padding: 0.8rem;
+  width: 80px;
+  border-radius: 10px;
+
+  text-shadow: -4px 4px 9px rgba(150, 150, 150, 1);
+}
+section.shop div#primary div.item, div#secondary div.item,
+div#throwable div.item, div#special div.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  height: 140px;
+  width: 150px;
+  background-color: grey;
+  margin: 5px;
+  background-position: center;
+}
+div.details {
+  background-color: rgba(0,0,0,0.75);
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 10px;
+  top: 150px;
+  bottom: 250px;
+  width: 300px;
+  min-height: 500px;
+  overflow: hidden;
+}
+div.detail_img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 350px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+div.detailHolder {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+}
+p.itemname {
+  margin: 25px;
+  font-size: 35px;
+  text-shadow: 4px 4px 4px #000;
+  font-weight: 400;
+}
+p.itemtagline {
+  margin: 12px;
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
+  font-weight: 400;
+}
+p.options {
+  font-size: 25px;
+  margin: 5px;
+}
+p.type {
+  font-weight: 600;
+  float: left;
+  margin: 0px;
+}
+p.price {
+  color: green;
+  margin: 0px;
+  text-align: right;
+}
+div.purchasebutton {
+  font-size: 24px;
+  padding: 15px;
+  transition-duration: 0.5s;
+}
+div.purchasebutton:hover {
+  background-color: white;
+  color: black;
+  transition-duration: 0.5s;
+}
+div.permbutton {
+  font-size: 24px;
+  padding: 15px;
+  transition-duration: 0.5s;
+}
+div.confirmbutton:hover {
+  background-color: darkgreen;
+  transition-duration: 0.5s;
+}
+div.cancelbutton:hover {
+  background-color: darkred;
+  transition-duration: 0.5s;
+}
+/* End Shop */

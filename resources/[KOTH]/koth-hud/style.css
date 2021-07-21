@@ -1,0 +1,549 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+}
+
+/* Base */
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-position: center;
+  background-size: 100%;
+}
+
+.hud {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.hud .teams {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.hud .teams .red span, .blue span, .green span {
+  margin: 5px;
+}
+
+.hud .teams .red, .blue, .green {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 25px;
+  width: auto;
+  border-radius: 10px;
+  padding: 0.2rem;
+  margin: 40px 10px;
+  color: white;
+
+  box-shadow: 1px -1px 27px 5px rgba(0,0,0,0.42);
+  -webkit-box-shadow: 1px -1px 27px 5px rgba(0,0,0,0.42);
+  -moz-box-shadow: 1px -1px 27px 5px rgba(0,0,0,0.42);
+}
+
+.hud .teams .red {
+  background-color: #e03e36;
+}
+
+.hud .teams .blue {
+  background-color: #368ee0;
+}
+
+.hud .teams .green {
+  background-color: #21cc46;
+}
+
+div.bag {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 250px;
+  width: 100%;
+  margin: 0 auto;
+  bottom: 0;
+  color: white;
+}
+
+.equipedWepon {
+  position: absolute; 
+  background-color: rgba(0, 0, 0, 0.70);
+  padding: 1rem;
+  height: 50px;
+  width: 270px;
+  right: 50px;
+  border-radius: 8px;
+  transform: skewY(4deg);
+
+  box-shadow: 1px -1px 27px 5px rgba(0, 0, 0, 0.20);
+}
+
+.weapon1.remove, .weapon2.remove, .weapon3.remove {
+  animation: 500ms reverse weapon ease-in forwards;
+}
+
+.equipedWepon.get {
+  animation: 500ms equiped ease-in forwards;
+}
+
+/* .equipedWepon {
+  position: absolute; 
+  background-color: rgba(0, 0, 0, 0.70);
+  padding: 1rem;
+  height: 50px;
+  width: 155px;
+  max-width: 270px;
+  right: 50px;
+  border-radius: 8px;
+  transform: skewY(4deg);
+
+  box-shadow: 1px -1px 27px 5px rgba(0, 0, 0, 0.20);
+} */
+
+@keyframes get {
+  0% {
+    width: 155px;
+  }
+  100% {
+    width: 270px;
+  }
+}
+
+.bind {
+  font-size: 15px;
+}
+
+.anim {
+  animation: get 3s forwards;
+}
+
+div.bag .equipedWepon img {
+  width: 100%;
+}
+
+div.bag .weapon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: #424242;
+  padding: 1rem;
+  height: 50px;
+  border-radius: 8px;
+  left: 2px;
+
+  box-shadow: 1px -1px 27px 5px rgba(0,0,0,0.42);
+  -webkit-box-shadow: 1px -1px 27px 5px rgba(0,0,0,0.42);
+  -moz-box-shadow: 1px -1px 27px 5px rgba(0,0,0,0.42);
+
+  transition: all 300ms ease-in;
+}
+
+div.bag div.reload {
+  position: absolute;
+  flex-direction: column;
+  left: 20px;
+  bottom: 95px;
+  border-radius: 8px;
+  background-color: #303030;
+  overflow: hidden;
+
+  box-shadow: 1px -1px 27px 5px rgba(0,0,0,0.42);
+  -webkit-box-shadow: 1px -1px 27px 5px rgba(0,0,0,0.42);
+  -moz-box-shadow: 1px -1px 27px 5px rgba(0,0,0,0.42);
+
+  transition: all 300ms ease-in;
+}
+
+div.bag div.reload span {
+  height: 10px;
+  border-radius: 8px;
+  background-color: #4658b0;
+
+  animation: 2s reload;
+}
+.wow {
+  animation: 3s weapon;
+}
+
+.change {
+  animation: get 5s reverse;
+}
+
+div.bag .weapon1 {
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0,0,0,0.70);
+  padding: 1rem;
+  height: 20px;
+  width: 80px;
+  right: 50px;
+  bottom: 180px;
+  border-radius: 8px;
+  transform: skewY(4deg);
+
+  box-shadow: 1px -1px 27px 5px rgba(0,0,0,0.20);
+
+  animation: 500ms weapon ease-in forwards;
+}
+
+div.bag .weapon1 img {
+  height: 150%;
+}
+
+div.bag .weapon2 {
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0,0,0,0.70);
+  padding: 1rem;
+  height: 20px;
+  width: 80px;
+  right: 50px;
+  bottom: 240px;
+  border-radius: 8px;
+  transform: skewY(4deg);
+
+  box-shadow: 1px -1px 27px 5px rgba(0,0,0,0.20);
+
+  animation: 500ms weapon ease-in forwards;
+}
+
+div.bag .weapon2 img {
+  height: 150%;
+}
+
+div.bag .weapon3 {
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0,0,0,0.70);
+  padding: 1rem;
+  height: 20px;
+  width: 80px;
+  right: 50px;
+  bottom: 300px;
+  border-radius: 8px;
+  transform: skewY(4deg);
+
+  box-shadow: 1px -1px 27px 5px rgba(0,0,0,0.20);
+
+    animation: 500ms weapon ease-in forwards;
+}
+
+div.bag .weapon3 img {
+  height: 150%;
+}
+
+.large {
+  width: 120px;
+}
+
+div.bag .equipedWepon .ammo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+div.bag .equipedWepon .ammo img {
+  width: 25%;
+}
+
+div.bag .equipedWepon .ammo span:nth-child(1) {
+  font-size: 35px;
+  margin: 5px;
+}
+
+div.player {
+  background-color: rgba(0,0,0,0.70);
+
+  overflow: hidden;
+
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+
+  width: 255px;
+  height: 50px;
+
+  padding: 0.5rem;
+
+  border-radius: 10px;
+
+  font-size: 24px;
+
+  left: 30px;
+  bottom: 250px;
+
+  overflow: hidden;
+}
+
+#xpright {
+  bottom: 47vh;
+  left: 350px;
+  text-align: left;
+}
+
+#xpcenter {
+  top: 41%;
+  left: 27%;
+  text-align: left;
+  transform: translate(110px, -50px);
+}
+
+div.xp-bar {
+  background-color: rgba(0,0,0,0.70);
+
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+
+  width: 270px;
+  height: 24px;
+
+  left: 30px;
+  bottom: 220px;
+
+  border-radius: 8px;
+
+  box-shadow: 1px -1px 27px 5px rgba(0,0,0,0.20);
+}
+
+div.xp-bar .lvl {
+  position: absolute;
+  display: flex;
+  width: 95%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.3rem;
+  top: -3px;
+}
+
+div.xp-bar .granted {
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  
+  top: 3px;
+
+  width: 100%;
+}
+
+div.xp-bar .granted span {
+  margin-right: 5px;
+}
+
+div.xp-bar #mana {
+  background-color: #349beb;
+
+  width: 40%;
+  height: 100%;
+
+  border-radius: 8px;
+
+  box-shadow: 1px -1px 27px 5px rgba(0,0,0,0.20);
+}
+
+div.utils {
+  background-color: rgba(0,0,0,0.70);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 170px;
+  width: 70px;
+  left: 310px;
+  bottom: 20px;
+  padding: 0.5rem;
+  border-radius: 8px;
+
+  box-shadow: 1px -1px 27px 5px rgba(0,0,0,0.20);
+}
+
+div.utils .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  padding: 0.5rem;
+  background-color: #424242;
+  border-radius: 10px;
+  margin: 5px 0;
+
+  box-shadow: 1px -1px 27px 5px rgba(0,0,0,0.42);
+  -webkit-box-shadow: 1px -1px 27px 5px rgba(0,0,0,0.42);
+  -moz-box-shadow: 1px -1px 27px 5px rgba(0,0,0,0.42);
+}
+
+div.utils .item img {
+  margin-left: 10px;
+  width: 60%;
+}
+
+div.bag div.life {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  right: 50px;
+  bottom: 50px;
+  border-radius: 8px;
+  background-color: #303030;
+  transform: skewY(4deg);
+  overflow: hidden;
+
+  box-shadow: 1px -1px 27px 5px rgba(0,0,0,0.42);
+  -webkit-box-shadow: 1px -1px 27px 5px rgba(0,0,0,0.42);
+  -moz-box-shadow: 1px -1px 27px 5px rgba(0,0,0,0.42);
+}
+
+div.bag div.life span {
+  max-width: 100%;
+  min-width: 0px;
+  height: 10px;
+  border-radius: 8px;
+  background-color: #b04646;
+
+  transition: all 300ms ease-in;
+}
+
+div.killevent {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  height: 300px;
+  width: 300px;
+}
+
+div.event {
+  background-color: rgba(0, 0, 0, 0.42);
+
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  font-weight: 600;
+
+  padding: 0.8rem;
+
+  height: 20px;
+  width: auto;
+  max-width: 300px;
+
+  border-radius: 10px;
+
+  color: white;
+  margin: 5px;
+}
+
+span#killer, span#killed {
+  width: 380%;
+  overflow: hidden;
+}
+
+span#killed {
+  text-align: right;
+}
+
+span#killer.red, span#killed.red {
+  color: #e03e36;
+}
+
+span#killer.greeen, span#killed.greeen {
+  color: #21cc46;
+}
+
+span#killer.bluee, span#killed.bluee {
+  color: #369ce0;
+}
+
+div.newxp {
+  position: fixed;
+  background-color: transparent;
+  font-family: 'Open Sans', sans-serif;
+  text-shadow: 2px 2px #000;
+}
+
+div.newxp h1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 30px;
+  color: #39b425;
+}
+div.newxp h2 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 25px;
+  color:lightgray;
+  margin-left: 15px;
+}
+
+div.event .weapon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.event .weapon img {
+  width: 75%;
+  transform: rotateY(180deg);
+  margin-left: -20px;
+}
+
+div.event .weapon img#headshot {
+  width: 23%;
+  margin-left: -10px;
+}
+
+@keyframes weapon {
+  0% {
+    right: -150px;
+  }
+  100% {
+    right: 50px;
+  }
+}
+
+@keyframes reload {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 3840px) {
+  div.newxp h1 {
+    font-size: 40px;
+  }
+  div.newxp h2 {
+    font-size: 36px;
+  }
+  #xpright {
+    right: 2vw;
+  }
+}

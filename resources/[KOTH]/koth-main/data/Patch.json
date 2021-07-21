@@ -1,0 +1,4 @@
+{
+    "patchfr" : "-Ajouts d'une notification lorsque vous vous faites heal par un medic\n-Ajouts de plusieurs points de spawn de véhicule\n-Reduction du temps de heal\n-Augmentation du temps pour enlever le heal du medic\n-Supprésion des commandes (/car, ect...)\n-Ajouts de 3 nouvelles zone de fight\n-Blocage des coups de cross\n-Désactivée le chat avec 'L'\n-Ajouts du 'No Collision' dans la base des teams\n-Modif du chat\n-Correction du leadboard",
+    "patchen" : "-Added a notification when you get healed by a medic\n-Added multiple vehicle spawn points\n-Reduced heal time Medic\n-Increased time to remove the heal from the medic\n-Remove Command (/car, ect...)\n-Add 3 news fight zones\n-Remove cross shots\n-Deactivate the chat with 'L'\n-Add 'No Collision' in you base(Teams)\n-Chat edit\n-Leaderboard correction"
+}

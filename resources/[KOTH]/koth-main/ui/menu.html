@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            user-select: none;
+        }
+        
+        div.panel {
+            position: fixed;
+            background-color: black;
+            width: 17%;
+            min-width: 300px;
+            height: 100%;
+            opacity: 80%;
+            color: white;
+            top: 0px;
+            left: 0px;
+        }
+        
+        div.button {
+            position: relative;
+            background-color: black;
+            opacity: 95%;
+            width: 100%;
+            height: 8%;
+            line-height: 280%;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 600;
+            top: 200px;
+            margin: 30px 0px 30px 0px;
+            transition-duration: 0.3s;
+        }
+        
+        div.button2 {
+            position: relative;
+            background-color: black;
+            opacity: 95%;
+            width: 100%;
+            height: 8%;
+            line-height: 280%;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 600;
+            margin: 30px 0px 30px 0px;
+            transition-duration: 0.3s;
+        }
+        
+        .button:hover {
+            background-color: white;
+            color: black;
+            transition-duration: 0.5s;
+        }
+        
+        .button:active {
+            animation: fadeOutRight;
+            animation-duration: 2s;
+        }
+        
+        .disabled {
+            color: #333;
+            pointer-events: none;
+        }
+        
+        div.link {
+            position: absolute;
+            bottom: 25px;
+            width: 100%;
+            font-size: 22px;
+            font-weight: 300;
+            text-align: center;
+            color: #b8b8b8;
+        }
+        
+        div.image {
+            position: fixed;
+            bottom: 44px;
+            left: 29px;
+            opacity: 95%;
+        }
+        
+        #playmenu {
+            position: fixed;
+            background-color: black;
+            color: white;
+            width: 20%;
+            left: 18%;
+            top: 30%;
+            opacity: 80%;
+            border-radius: 10px;
+            animation-duration: 1s;
+        }
+        
+        #rulesmenu {
+            position: fixed;
+            background-color: black;
+            color: white;
+            width: 60%;
+            left: 18%;
+            top: 20%;
+            opacity: 80%;
+            border-radius: 10px;
+            animation-duration: 1s;
+        }
+        
+        .rulesheader {
+            padding: 15px;
+            margin: 0px;
+            font-weight: 400;
+        }
+        
+        #rules {
+            line-height: 40px;
+            font-weight: 400
+        }
+        
+        #teamsel {
+            text-align: center;
+            font-weight: 700;
+            font-size: 35px;
+        }
+        
+        #redbtn {
+            color: red;
+        }
+        
+        #greenbtn {
+            color: green;
+        }
+        
+        #bluebtn {
+            color: blue;
+        }
+        
+        #redbtn:hover {
+            background-color: red;
+            color: white;
+            transition-duration: 0.5s;
+        }
+        
+        #greenbtn:hover {
+            background-color: green;
+            color: white;
+            transition-duration: 0.5s;
+        }
+        
+        #bluebtn:hover {
+            background-color: blue;
+            color: white;
+            transition-duration: 0.5s;
+        }
+    </style>
+</head>
+
+<body style="display: none;">
+    <div class="panel" id="primary">
+        <p style="text-align: center;font-weight: 100;font-size: 32px;margin-top: 15px;margin-bottom: 0px;"></p>
+        <p style="font-weight: 600;font-size: 40px;text-align: center;margin: 5px;">KOTH</p>
+        <div class="button animate__animated animate__fadeInLeft" id="playbtn" onclick="openPanel('playmenu');closePanel('rulesmenu')">
+            <p>Play</p>
+        </div>
+        <div class="button animate__animated animate__fadeInLeft animate__slower" id="rulesbtn" onclick="openPanel('rulesmenu');closePanel('playmenu')">
+            <p>Server rules</p>
+        </div>
+        <div class="link animate__animated animate__fadeInUp" id="discord"><i class="fab fa-discord"></i> discord.gg/atlantiss-koth</div>
+    </div>
+    <div class="menu" id="playmenu" style="display:none">
+        <p id="teamsel">Select your Team</p>
+        <div class="button2" id="redbtn" onclick="playGame(1, this);">
+            <p>Red Team</p>
+        </div>
+        <div class="button2" id="greenbtn" onclick="playGame(3, this);">
+            <p>Green Team</p>
+        </div>
+        <div class="button2" id="bluebtn" onclick="playGame(2, this);">
+            <p>Blue Team</p>
+        </div>
+    </div>
+    <div class="bigmenu" id="rulesmenu" style="display:none">
+        <h1 class="rulesheader">Server Rules</h1>
+        <h2 class="rulesheader" style="font-size: 18px; padding-top: 0px; margin: 0px;">By joining the game you agree to be held to these rules and community standards.</h2>
+        <hr>
+        <ul id="rules">
+            <li>No intentional teamkilling/friendly fire.</li>
+            <li>No trolling or griefing other players.</li>
+            <li>No stealing friendly vehicles when they are inside the spawn zone. This includes entering a vehicle you are told not to be in by the owner.</li>
+            <li>Players are not permitted to enter enemy bases (unless flying over).</li>
+            <li>Players may not behave in a friendly fashion towards members of the enemy teams.</li>
+            <li>Freshly spawned helicopters must be allowed to take off and leave their base (or reaching an altitude of 100 meters above the ground, prior to being engaged. They may not shoot from their helicopter until they have left the base as well.</li>
+            <li>Glitching/Cheating/Exploiting of any kind will result in a permanent ban.</li>
+            <li>Advertising is not allowed (twitch streams allowed).</li>
+            <li>Racism or other forms of hate will not be permitted on this server.</li>
+        </ul>
+    </div>
+    <div class="image" id="watermark"><img src="content/logo.png" alt="koth logo" width="250px" height="250px"></img>
+    </div>
+    <audio onloadstart="this.volume=0.125" loop id="bg-music">
+            <source src="content/audio.ogg" type="audio/ogg">
+        </audio>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.min.js" type="text/javascript"></script>
+<script>
+    var audioPlayer = null;
+
+function closePanel(panel) {
+    if (document.getElementById(panel).style.display == "block") {
+        document.getElementById(panel).classList.add('animate__animated', 'animate__bounceOutUp');
+        document.getElementById(panel).addEventListener('animationend', () => {
+            document.getElementById(panel).style.display = "none";
+            document.getElementById(panel).classList.remove('animate__animated', 'animate__bounceOutUp');
+        }, {
+            once: true
+        });
+    }
+}
+
+function openPanel(panel) {
+    if (document.getElementById(panel).style.display == "none") {
+        document.getElementById(panel).classList.add('animate__animated', 'animate__bounceInDown');
+        document.getElementById(panel).style.display = "block";
+        document.getElementById(panel).addEventListener('animationend', () => {
+            document.getElementById(panel).classList.remove('animate__animated', 'animate__bounceInDown');
+        }, {
+            once: true
+        });
+    } else {
+        closePanel(panel);
+    }
+}
+
+function playGame(team, elem) {
+    if (!elem.classList.contains("disabled")) {
+        fetch('https://koth-main/selectTeam', {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json; charset=UTF-8',
+            },
+            body: JSON.stringify({
+                selectedTeam: team
+            })
+        })
+        .then(() => fetch('https://koth-ui/AtlantissKOTH:UI:SendNUIMessage', {
+            method: "POST",
+            //headers: {'Content-Type': 'application/json; charset=UTF-8'},
+            body: JSON.stringify({eventName: "selectTeam"})
+        }))
+        .catch(console.error)
+    }
+}
+
+function resetTeamSelect(elem, text) {
+    document.getElementById(elem).classList.remove("disabled");
+    document.getElementById(elem).removeAttribute('style');
+    document.getElementById(elem).innerHTML = text;
+}
+
+window.addEventListener('message', (event) => {
+    let data = event.data
+
+
+    if (data.type == 'show') {
+        document.body.style.display = "block";
+        document.getElementById("redbtn").innerHTML = data.one;
+        document.getElementById("greenbtn").innerHTML = data.two;
+        document.getElementById("bluebtn").innerHTML = data.three;
+        document.getElementById("bg-music").play();
+    } else if (data.type == 'hide') {
+        document.body.style.display = "none";
+        document.getElementById("bg-music").pause();
+    } else if (data.type == 'teamfull') {
+        if (data.fullteam == 1) {
+            document.getElementById("redbtn").classList.add("disabled");
+            document.getElementById("redbtn").style.color = "#888";
+            document.getElementById("redbtn").style.backgroundColor = "transparent";
+            var originalText = document.getElementById("redbtn").innerHTML;
+            document.getElementById("redbtn").innerHTML = "Team Full"
+            setTimeout(function() {
+                resetTeamSelect("redbtn", originalText)
+            }, 10000)
+        } else if (data.fullteam == 2) {
+            document.getElementById("bluebtn").classList.add("disabled");
+            document.getElementById("bluebtn").style.color = "#888";
+            document.getElementById("bluebtn").style.backgroundColor = "transparent";
+            var originalText = document.getElementById("bluebtn").innerHTML;
+            document.getElementById("bluebtn").innerHTML = "Team Full"
+            setTimeout(function() {
+                resetTeamSelect("bluebtn", originalText)
+            }, 10000)
+        } else if (data.fullteam == 3) {
+            document.getElementById("greenbtn").classList.add("disabled");
+            document.getElementById("greenbtn").style.color = "#888";
+            document.getElementById("greenbtn").style.backgroundColor = "transparent";
+            var originalText = document.getElementById("greenbtn").innerHTML;
+            document.getElementById("greenbtn").innerHTML = "Team Full"
+            setTimeout(function() {
+                resetTeamSelect("greenbtn", originalText)
+            }, 10000)
+        }
+    }
+})
+
+document.querySelector('#discord').onclick = event => {
+    let $temp = document.createElement("input")
+    document.querySelector('body').append($temp)
+    $temp.value = document.querySelector('#discord').innerHTML.trim().slice(31)
+    $temp.select()
+    document.execCommand("copy")
+    $temp.remove()
+
+    fetch('https://koth-ui/AtlantissKOTH:UI:SendNUIMessage', {
+        method: "POST",
+        body: JSON.stringify({
+            eventName: "showNotification",
+            args: {
+                message: "Discord link successfully copied to clipboard !",
+                theme: "success",
+                time: 5000
+            }
+        })
+    })
+    .catch(e => e.message == "Failed to fetch" ? "" : console.error(e))
+}
+</script>
+</html>

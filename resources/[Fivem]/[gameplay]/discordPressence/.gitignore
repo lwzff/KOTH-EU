@@ -1,0 +1,10 @@
+node_modules
+dist
+*.log
+.yarn.*
+
+.vscode
+.idea
+
+/settings.json
+/fxmanifest.lua

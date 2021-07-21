@@ -1,0 +1,173 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    user-select: none;
+}
+
+body,
+html {
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    margin-left: 380px;
+    margin-top: 75px;
+    overflow: hidden;
+}
+
+.view {
+    flex-direction: column;
+    height: 750px;
+    width: 1250px;
+    border-radius: 30px;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.70);
+    overflow: hidden;
+}
+
+div.image {
+    position: fixed;
+    bottom: 200px;
+    right: 283px;
+    opacity: 100%;
+}
+
+
+.view header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    height: 50px;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.view section {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.view .playerslist,
+.view .playerstats {
+    margin: 10px;
+    height: 92%;
+    width: 100%;
+}
+
+.view .desc {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    border-bottom: 2px solid white;
+}
+
+.view .desc .rank,
+.view .desc .kills,
+.view .desc .assist,
+.view .desc .death,
+.view .desc .score {
+    width: 100px;
+}
+
+.view .desc .name {
+    width: 20%;
+}
+
+.view .player {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.8rem;
+    height: 14px;
+    margin: 10px 0;
+    transition: all 300ms ease-in-out;
+    border-radius: 5px;
+    text-shadow: -2px 1px 5px rgba(150, 150, 150, 1);
+}
+
+.view .player #rank,
+.view .player #kills,
+.view .player #assist,
+.view .player #death,
+.view .player #death,
+.view .player #score {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100px;
+}
+
+.view .player #name {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 20%;
+    overflow: hidden;
+}
+
+.view .player.red {
+    background-color: #f54542;
+}
+
+.view .player.blue {
+    background-color: #4287f5;
+}
+
+.view .player.green {
+    background-color: green;
+}
+
+.view .playerstats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    height: 98%;
+    background-color: grey;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.view .playerstats div {
+    margin: 0 0 30px 0;
+}
+
+.view .playerstats div#player {
+    display: flex;
+    align-items: center;
+    font-size: 80px;
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.view .playerstats div.lvl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    font-weight: 600;
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+.view .playerstats div.stats {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 35px;
+}
+
+.view .playerstats div.bag {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    font-size: 35px;
+}

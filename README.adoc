@@ -15,7 +15,8 @@ Donc merci de ne pas critiquez le code ! OUI le code est moches des boucles inut
 
 image::https://www.les-parrains.fr/wp-content/uploads/2020/11/Paypal_bandeau.png[Support me on paypal,link="https://streamelements.com/loze_kylian/tip"]
 
-Merci au donateur !
+https://streamelements.com/loze_kylian/tip[(Merci au donateur !)]
+
 
 === Help / Information
 

@@ -41,3 +41,10 @@ Developer:: Kylian
 DMZ:: https://twitter.com/Dmzzz_TTV
 Nampac:: https://twitter.com/Nampac_
 Kylian:: https://twitter.com/kylian_Rd
+
+
+== Fork
+
+.Added server CFG
+[horizontal]
+lwz:: https://twitter.com/lewizooo

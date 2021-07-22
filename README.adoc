@@ -18,6 +18,10 @@ image::https://www.les-parrains.fr/wp-content/uploads/2020/11/Paypal_bandeau.png
 https://streamelements.com/loze_kylian/tip[(Merci au donateur !)]
 
 
+# Preview :
+
+https://www.youtube.com/watch?v=vuB4zPJD0Y4&t=28s
+
 === Help / Information
 
 WARNING: Le code est vraiment déguelasse à cette époque je ne savais rien faire, je n'avais jamais fait un aussi gros projet, donc je me suis éparpiller un peu partout en faisant des boucles très moches.
